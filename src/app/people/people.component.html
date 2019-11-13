@@ -1,0 +1,11 @@
+<p>people works!</p>
+<ul>
+ <li *ngFor="let p of people" 
+    (click)=onSelect(p) 
+    [class.selected]="p==selectedPerson">
+    <a routerLink="/details/{{p.id}}">{{p.name}}</a>&nbsp;
+    <a routerLink="/edit/{{p.id}}">Edit</a>&nbsp;
+    <button (click)=deletePerson(p.id)>Delete</button>
+ </li>
+</ul>
+<app-person-details *ngIf=selectedPerson [person]=selectedPerson (deleteEvent)=update($event)></app-person-details>

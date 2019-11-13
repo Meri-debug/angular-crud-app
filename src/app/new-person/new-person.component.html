@@ -1,0 +1,4 @@
+<p>Create a new person:</p>
+Name: <input #name> <br/>
+Email: <input #email> <br/>
+<button (click)="addPerson(name.value, email.value);name.value='';email.value=''">Add</button>

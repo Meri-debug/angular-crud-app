@@ -1,0 +1,9 @@
+<p>
+    person-edit<br/>
+        Person Id:{{person.id}}
+      </p>
+      <div *ngIf=person>
+      <input [(ngModel)]=person.name><br/>
+      <input [(ngModel)]=person.email/><br />
+      <button (click)=update()>Update</button>
+      </div>
